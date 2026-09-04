@@ -5,8 +5,8 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
+from core.agent.factory import get_orchestrator
 from core.agent.interpreter import GoalInterpreter
-from core.agent.orchestrator import AgentOrchestrator
 from core.api.dependencies import get_db, resolve_entity_by_id_or_prefix
 from core.api.rate_limiter import rate_limit
 from core.api.serializers import automation_to_out, run_to_out
@@ -21,7 +21,7 @@ logger = logging.getLogger("core.api.v1.automations")
 router = APIRouter(prefix="/automations", tags=["Automations"])
 
 interpreter = GoalInterpreter()
-orchestrator = AgentOrchestrator()
+orchestrator = get_orchestrator()
 
 
 @router.get("/plan/stream", dependencies=[Depends(rate_limit("goal"))])

@@ -7,7 +7,7 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, Header, HTTPException, Request, status
 from sqlalchemy.orm import Session
 
-from core.agent.orchestrator import AgentOrchestrator
+from core.agent.factory import get_orchestrator
 from core.api.dependencies import get_db
 from core.config.settings import get_settings
 from core.db.orm import Automation
@@ -17,7 +17,7 @@ logger = logging.getLogger("core.api.v1.scheduler")
 
 router = APIRouter(prefix="/scheduler", tags=["Scheduler"])
 
-orchestrator = AgentOrchestrator()
+orchestrator = get_orchestrator()
 
 
 def verify_scheduler_auth(

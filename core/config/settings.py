@@ -19,6 +19,7 @@ class Settings(BaseSettings):
     llm_api_key: str = ""
     llm_model: str = "gemini-2.5-flash"
     llm_base_url: str = "https://openrouter.ai/api/v1"
+    orchestrator_engine: str = "strands"
 
     # Web Data Retrieval & Discovery
     retrieval_api_key: str = ""

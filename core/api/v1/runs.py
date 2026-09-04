@@ -9,7 +9,8 @@ from fastapi import APIRouter, Depends, HTTPException, Request, Response, status
 from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
 
-from core.agent.orchestrator import AgentOrchestrator, RunPoolManager
+from core.agent.factory import get_orchestrator
+from core.agent.orchestrator import RunPoolManager
 from core.api.dependencies import get_db, resolve_entity_by_id_or_prefix
 from core.api.rate_limiter import rate_limit
 from core.api.serializers import result_to_out, run_to_out
@@ -24,7 +25,7 @@ from core.models.schemas import RunOut
 logger = logging.getLogger("core.api.v1.runs")
 
 router = APIRouter(tags=["Runs"])
-orchestrator = AgentOrchestrator()
+orchestrator = get_orchestrator()
 
 
 @router.get("/runs/{run_id}", response_model=RunOut)
