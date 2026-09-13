@@ -1,0 +1,18 @@
+{
+  "venvPath": "core",
+  "venv": "venv",
+  "extraPaths": [
+    ".",
+    "core",
+    "mcp/src"
+  ],
+  "typeCheckingMode": "standard",
+  "reportExplicitAny": "none",
+  "reportAny": "none",
+  "reportUnknownVariableType": "none",
+  "reportUnknownMemberType": "none",
+  "reportUnknownArgumentType": "none",
+  "reportMissingParameterType": "none",
+  "reportUnknownParameterType": "none",
+  "reportUnusedCallResult": "none"
+}
