@@ -12,9 +12,6 @@
 
 ---
 
-## Hackathon Submission Highlights
-
-This project was built for the [Multi-App AI Agent Hackathon](https://multiappagenthackathon.com/) (hosted by Lemma AI & Comma Capital, judged by founders of Arga Labs & Userlens).
 
 ### 01 · Project Overview
 * **What we built**: **Orbit (`orbc`)** is an autonomous, multi-step AI agent for end-to-end web data operations and operational intelligence. Users define goals in plain natural language (e.g. *"Daily at 6 AM, monitor pricing and GPU instance availability across cloud vendors, verify against schema anomalies, alert Slack on price drops, and archive datasets to S3"*).
@@ -26,11 +23,11 @@ Orbit connects and takes action across multiple external applications in its aut
 
 1. **Slack (`Incoming Webhooks / Chat API`)**:
    * **Action**: Formats and dispatches real-time structured operational alerts, execution summary cards, and trigger notifications (e.g., price dips, critical metric thresholds) directly into target team channels.
-2. **Amazon Web Services — S3 (`Object Storage API`)**:
+2. **S3 (`Object Storage API`)**:
    * **Action**: Streams and archives structured datasets, JSON records, compiled executive dossiers, and audit snapshots into designated S3 buckets with custom prefix partitioning and KMS encryption.
 3. **Google Gemini / Generative AI (`Intelligence Engine`)**:
    * **Action**: Powers natural language objective synthesis, autonomous web DOM semantic extraction, self-healing query formulation, and dynamic schema derivation via native GenAI and AWS Strands SDK.
-4. **Transactional Email / Resend (`Notification Adapter`)**:
+4. **Transactional Email (`Notification Adapter`)**:
    * **Action**: Generates and delivers compiled HTML/plain-text data dossiers, provenance summaries, and run alerts to designated team stakeholder inboxes.
 5. **PostgreSQL / Relational Database Sink (`Enterprise Warehouse`)**:
    * **Action**: Dispatches validated records with schema migration and upsert logic directly into production relational tables.
