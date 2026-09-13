@@ -1,0 +1,18 @@
+{
+	"name": "Orbit — Autonomous Web Data Operations",
+	"short_name": "Orbit",
+	"description": "Set the goal. Walk away. Autonomous goal-driven web data extraction, proxy operations, and anomaly verification.",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#07090E",
+	"theme_color": "#07090E",
+	"orientation": "portrait-primary",
+	"icons": [
+		{
+			"src": "/favicon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml",
+			"purpose": "any maskable"
+		}
+	]
+}
